@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=McLaren&display=swap');
 
 :root {
     --AntiqueWhite: #F0E4D3;
@@ -16,6 +17,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* border: 2px solid orange; */
 }
 
 html {
@@ -39,7 +41,7 @@ header {
     background: var(--AntiqueWhite);
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -81,14 +83,159 @@ header .logo a {
     transition: all 0.3s;
 }
 
+
+/** Hero Section **/
+.hero {
+    width: 100%;
+    height: 80vh;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Child1 */
+.hero .title {
+    width: 500px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 2%;
+}
+
+/* Hero Title */
+.hero .title h1 {
+    font-family: "Montserrat", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--Night);
+}
+
+/* Hero Paragraph */
+.hero .title p {
+    font-family: "Manjari", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--grey);
+    letter-spacing: 0.1rem;
+}
+
+/* CV Download  */
+.hero .title .downloadL {
+    display: flex;
+    width: 60%;
+    height: 28%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Download Icon */
+.hero .fa-cloud-arrow-down {
+    color: var(--Night);
+}
+
+/* Download Link */
+.hero .title .downloadL .file_pdf a {
+    font-family: "McLaren", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--Night);
+    background-color: var(--Jonquil);
+    padding: 15px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Social icons */
+.hero .title .downloadL .socials {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.hero .title .downloadL .socials i {
+    font-size: 1.8rem;
+    color: var(--grey);
+}
+
+.hero .title .downloadL .socials i:hover {
+    color: var(--Night);
+}
+
+/* Child2 */
+.hero .hero_img {
+    width: 550px;
+}
+
+.hero .hero_img img {
+    width: 100%;
+}
+
 /** BreakPoints **/
+@media (max-width: 1445px) {
+    .hero .title {
+        width: 500px;
+        gap: 1.5rem;
+    }
+
+    /* Hero Title */
+    .hero .title h1 {
+        font-size: 3.8rem;
+    }
+}
+
+@media (max-width: 1025px) {
+
+    /* CV Download  */
+    .hero .title .downloadL {
+        width: 65%;
+    }
+
+    /* Child2 */
+    .hero .hero_img {
+        width: 420px;
+    }
+}
+
 @media (max-width: 992px) {
     header {
         padding: 1rem 5%;
     }
+
+    /* Hero Section */
+    /* Child1 */
+    .hero .title {
+        width: 450px;
+        gap: 1.5rem;
+        /* border: 2px solid violet; */
+    }
+
+    /* Hero Title */
+    .hero .title h1 {
+        font-size: 3.6rem;
+    }
+
+    /* Hero Paragraph */
+    .hero .title p {
+        font-size: 1.6rem;
+    }
+
+    /* CV Download  */
+    .hero .title .downloadL {
+        width: 70%;
+    }
+
+    /* Child2 */
+    .hero .hero_img {
+        width: 400px;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
+
+    /* Navigation Bar */
     #nav_bar {
         position: absolute;
         top: 100%;
@@ -101,11 +248,11 @@ header .logo a {
         align-items: center;
         justify-content: center;
     }
-    
+
     #nav_bar a {
         margin: 1rem 0;
     }
-    
+
     .hamburger {
         display: flex;
     }
@@ -125,4 +272,102 @@ header .logo a {
     #nav_bar.active {
         display: flex;
     }
+
+
+    /** Hero Section **/
+    .hero {
+        margin-top: 1rem;
+        flex-direction: column-reverse;
+    }
+
+    /* Child1 */
+    .hero .title {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Hero Title */
+    .hero .title h1 {
+        font-size: 3.3rem;
+    }
+
+    /* Hero Paragraph */
+    .hero .title p {
+        font-size: 1.5rem;
+    }
+
+    /* CV Download  */
+    .hero .title .downloadL {
+        display: flex;
+        width: 70%;
+        justify-content: space-around;
+        align-items: center;
+        /* border: 2px solid blue; */
+    }
+
+    /* Child2 */
+    .hero .hero_img {
+        width: 460px;
+    }
+}
+
+@media (max-width: 425px) {
+
+    /* Child1 */
+    .hero .title {
+        width: 350px;
+        gap: 1.5rem;
+        /* border: 2px solid violet; */
+    }
+
+    /* Hero Title */
+    .hero .title h1 {
+        font-size: 3rem;
+    }
+
+    /* Hero Paragraph */
+    .hero .title p {
+        font-size: 1.6rem;
+    }
+
+    /* Child2 */
+    .hero .hero_img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 376px) {
+
+    /* Child1 */
+    .hero .title {
+        width: 350px;
+        gap: 1.5rem;
+    }
+
+    /* Hero Title */
+    .hero .title h1 {
+        font-size: 2.3rem;
+    }
+
+    /* Hero Paragraph */
+    .hero .title p {
+        font-size: 1rem;
+    }
+
+    /* CV Download  */
+    .hero .title .downloadL {
+        width: 80%;
+        /* border: 2px solid blue; */
+    }
+
+    /* Download Link */
+    .hero .title .downloadL .file_pdf a {
+        font-size: 1rem;
+        padding: 15px 8px;
+        border-radius: 15px;
+    }
+
 }
