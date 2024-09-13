@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --AntiqueWhite: #F0E4D3;
+    --grey: #383838;
+    --Jonquil: #FFCF00;
+    --Night: #141414;
+    --Platinum: #E3E4E5;
+    --profile_gradient: linear-gradient(45deg, #FBF5EE, #F5E8D5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Manrope", Arial, Helvetica Neue, Helvetica, sans-serif;
+    /* font-family: "Manjari", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-family: "Aoboshi One", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-family: "Montserrat", Arial, Helvetica Neue, Helvetica, sans-serif; */
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Navbar */
+header {
+    width: 100%;
+    position: sticky;
+    padding: 1.3rem 10%;
+    background: var(--AntiqueWhite);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/** Logo */
+header .logo a {
+    font-size: 1.2rem;
+    color: var(--Night);
+}
+
+/* Nav links */
+#nav_bar a {
+    font-family: "Manrope", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--Night);
+    text-decoration: none;
+    margin-left: 1.3rem;
+}
+
+#nav_bar a.active {
+    display: block;
+    font-size: 1.1rem;
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 2px;
+    width: 25px;
+    background: var(--Night);
+    margin: 4px;
+    transition: all 0.3s;
+}
+
+/** BreakPoints **/
+@media (max-width: 992px) {
+    header {
+        padding: 1rem 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    #nav_bar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 14.5rem;
+        background: var(--AntiqueWhite);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #nav_bar a {
+        margin: 1rem 0;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(9px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(9px, -5px);
+    }
+
+    #nav_bar.active {
+        display: flex;
+    }
+}
