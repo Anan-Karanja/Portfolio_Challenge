@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <script src="https://kit.fontawesome.com/84dc69d9ca.js" crossorigin="anonymous" defer></script>
     <script src="./app.js" defer></script>
     <title>Anan Portfolio</title>
@@ -12,21 +15,24 @@
 
 <body>
     <!-- Navigation  -->
-    <header>
-        <div class="logo">
-            <a href="#Home"><i class="fa-solid fa-code"></i></a>
+    <header class="navigation">
+        <div class="sec_parent">
+
+            <div class="logo">
+                <a href="#Home"><i class="fa-solid fa-code"></i></a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav id="nav_bar">
+                <a href="#About">About</a>
+                <a href="#Projects">Projects</a>
+                <a href="#Skills">Skills</a>
+                <a href="#Contact">Contact</a></li>
+            </nav>
         </div>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <nav id="nav_bar">
-            <a href="#About">About</a>
-            <a href="#Projects">Projects</a>
-            <a href="#Skills">Skills</a>
-            <a href="#Contact">Contact</a></li>
-        </nav>
     </header>
     <!-- Hero Section -->
     <section>
@@ -54,36 +60,95 @@
             </div>
         </div>
     </section>
-    <!-- About Section -->
-    <section>
-        <div id="About">
-            <!-- Child1 -->
-            <div class="title2">
-                <h1>About</h1>
-            </div>
-            <!-- Child2 -->
-            <div class="profile">
-                <i class="fa-solid fa-address-card"></i>
-                <div class="myName">
-                    <h4>Anan Karanja</h4>
-                </div>
-                <div class="location">
 
-                </div>
+    <!-- About Section -->
+    <section class="container py-5 mt-5" id="About">
+        <div class="row">
+            <div class="profileImg col-12 col-lg-4">
+                <img src="./Profile tag_2.png" alt="Profile" width="250" class="img-fluid ms-auto d-block">
             </div>
-            <!-- Child3 -->
-            <div class="paragraph">
-                <p>
-                    I'm an aspiring software developer with a strong interest in web and mobile app development. While
-                    my formal education extends to high school, I am actively pursuing my tech aspirations through
-                    platforms like FreeCodeCamp, Udemy, PLP, CS50, and YouTube tutorials.
-                    Currently, I am focusing on solidifying my web technologies such as JavaScript skills to create
+            <div class="info col-12 col-lg-8">
+                <h2 class="textPrimary">About</h2>
+                <p>I'm an aspiring software developer with a strong interest in web and mobile app development. While my
+                    formal education extends to high school, I am actively pursuing my tech aspirations through
+                    platforms like FreeCodeCamp, Udemy, PLP, CS50, and YouTube tutorials.</p>
+
+                <p>Currently, I am focusing on solidifying my web technologies such as JavaScript skills to create
                     dynamic and captivating web experiences. I am also eager to explore technologies like React, PHP,
                     Python, Node.js, Kotlin, and Swift to broaden my horizons and contribute to innovative projects
-                    across various platforms.
-                </p>
+                    across various platforms.</p>
             </div>
         </div>
+    </section>
+
+    <!-- Project Section -->
+    <section class="featured" id="Projects">
+        <div class="container">
+            <h2 class="textPrimary">Projects</h2>
+        </div>
+        <!-- Card1 -->
+        <div class="container py-3">
+            <div class="row gp-5">
+                <!-- Project 1 -->
+                <div class="col-12 col-lg-4">
+                    <div class="card shadow">
+                        <!-- Project Image -->
+                        <img src="./images/A JavaScript Clock.png" alt="" class="card-img-top" height="250">
+                        <!-- Info -->
+                        <div class="card-body">
+                            <h3 class="cardTitle">A JavaScript Clock</h3>
+                            <!-- Card Links -->
+                            <div class="buttons">
+                                <a href="https://github.com/Anan-Karanja/CSS-JS-Clock" class="btn"
+                                    target="_blank">Github</a>
+                                <a href="https://anan-karanja.github.io/CSS-JS-Clock/" class="btn"
+                                    target="_blank">Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-12 col-lg-4">
+                    <div class="card shadow">
+                        <!-- Project Image -->
+                        <img src="./images/Email Validator.png" alt="" class="card-img-top" height="250">
+                        <!-- Info -->
+                        <div class="card-body">
+                            <h3 class="cardTitle">Email Validator</h3>
+                            <!-- Card Links -->
+                            <div class="buttons">
+                                <a href="https://github.com/Anan-Karanja/Email-Validation" class="btn"
+                                    target="_blank">Github</a>
+                                <a href="https://anan-karanja.github.io/Email-Validation/" class="btn"
+                                    target="_blank">Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="col-12 col-lg-4">
+
+                    <div class="card shadow">
+                        <!-- Project Image -->
+                        <img src="./images/Car Gallery.png" alt="" width="150" class="card-img-top" height="250">
+                        <!-- Info -->
+                        <div class="card-body">
+                            <h3 class="cardTitle">Car & Bike Gallery</h3>
+                            <!-- Card Links -->
+                            <div class="buttons">
+                                <a href="https://github.com/Anan-Karanja/Image-Gallery" class="btn"
+                                    target="_blank">Github</a>
+                                <a href="https://anan-karanja.github.io/Image-Gallery/" class="btn"
+                                    target="_blank">Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
     </section>
 </body>
 

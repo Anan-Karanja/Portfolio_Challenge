@@ -10,7 +10,7 @@
     --Jonquil: #FFCF00;
     --Night: #141414;
     --Platinum: #E3E4E5;
-    --profile_gradient: linear-gradient(45deg, #FBF5EE, #F5E8D5);
+    --profile_gradient: linear-gradient(-45deg, #FBF5EE, #F5E8D5);
 }
 
 * {
@@ -24,35 +24,43 @@ html {
     font-size: 16px;
 }
 
-body {
-    font-family: "Manrope", Arial, Helvetica Neue, Helvetica, sans-serif;
-    /* font-family: "Manjari", Arial, Helvetica Neue, Helvetica, sans-serif;
+/* body { */
+/* font-family: "Manrope", Arial, Helvetica Neue, Helvetica, sans-serif; */
+/* font-family: "Manjari", Arial, Helvetica Neue, Helvetica, sans-serif;
     font-family: "Aoboshi One", Arial, Helvetica Neue, Helvetica, sans-serif;
     font-family: "Montserrat", Arial, Helvetica Neue, Helvetica, sans-serif; */
-    width: 100vw;
-    height: 100vh;
-}
+/* width: 100vw;
+    height: 100vh; */
+/* } */
 
 /* Navbar */
 header {
     width: 100%;
-    position: sticky;
-    padding: 1.3rem 10%;
+    position: fixed;
     background: var(--AntiqueWhite);
-    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.navigation .sec_parent {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative;
+    width: 100%;
+    padding: 1.3rem 10%;
+
 }
 
 /** Logo */
-header .logo a {
+header .sec_parent .logo a {
     font-size: 1.2rem;
     color: var(--Night);
 }
 
 /* Nav links */
-#nav_bar a {
+.sec_parent #nav_bar a {
     font-family: "Manrope", Arial, Helvetica Neue, Helvetica, sans-serif;
     font-size: 1.2rem;
     font-weight: 500;
@@ -61,7 +69,7 @@ header .logo a {
     margin-left: 1.3rem;
 }
 
-#nav_bar a.active {
+.sec_parent #nav_bar a.active {
     display: block;
     font-size: 1.1rem;
     margin: 1.5rem 0;
@@ -69,13 +77,13 @@ header .logo a {
 }
 
 /* Hamburger menu styles */
-.hamburger {
+.sec_parent .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
 }
 
-.hamburger span {
+.sec_parent .hamburger span {
     height: 2px;
     width: 25px;
     background: var(--Night);
@@ -88,7 +96,7 @@ header .logo a {
 .hero {
     width: 100%;
     height: 80vh;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 0 5%;
     display: flex;
     align-items: center;
@@ -173,6 +181,86 @@ header .logo a {
     width: 100%;
 }
 
+
+/* About Section */
+
+#About {
+    width: 80%;
+    /* margin: 0 auto; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info .profileImg {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.textPrimary {
+    font-family: "Manrope", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    color: var(--grey);
+    margin-bottom: 8px;
+}
+
+
+
+.info p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: "Manjari", Arial, Helvetica Neue, Helvetica, sans-serif;
+    color: var(--grey);
+}
+
+
+/* Project Section */
+.projects {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects .container {
+    width: 80%;
+}
+
+.card img{
+    object-fit: cover;
+}
+
+.cardTitle {
+    font-family: "Manrope", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-align: center;
+    color: var(--grey);
+    margin-bottom: 8px;
+}
+
+/* card button */
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.buttons a {
+    font-family: "McLaren", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--Night);
+    background-color: var(--Jonquil);
+    padding: 6px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
 /** BreakPoints **/
 @media (max-width: 1445px) {
     .hero .title {
@@ -231,12 +319,17 @@ header .logo a {
     .hero .hero_img {
         width: 400px;
     }
+
+    /* Project */
+    .card{
+        margin-bottom: 30px;
+    }
 }
 
 @media (max-width: 769px) {
 
     /* Navigation Bar */
-    #nav_bar {
+    .sec_parent #nav_bar {
         position: absolute;
         top: 100%;
         left: 0;
@@ -249,27 +342,27 @@ header .logo a {
         justify-content: center;
     }
 
-    #nav_bar a {
+    .sec_parent #nav_bar a {
         margin: 1rem 0;
     }
 
-    .hamburger {
+    .sec_parent .hamburger {
         display: flex;
     }
 
-    .hamburger.active span:nth-child(1) {
+    .sec_parent .hamburger.active span:nth-child(1) {
         transform: rotate(45deg) translate(9px, 5px);
     }
 
-    .hamburger.active span:nth-child(2) {
+    .sec_parent .hamburger.active span:nth-child(2) {
         opacity: 0;
     }
 
-    .hamburger.active span:nth-child(3) {
+    .sec_parent .hamburger.active span:nth-child(3) {
         transform: rotate(-45deg) translate(9px, -5px);
     }
 
-    #nav_bar.active {
+    .sec_parent #nav_bar.active {
         display: flex;
     }
 
@@ -311,6 +404,10 @@ header .logo a {
     /* Child2 */
     .hero .hero_img {
         width: 460px;
+    }
+
+    .card{
+        margin-bottom: 20px;
     }
 }
 
