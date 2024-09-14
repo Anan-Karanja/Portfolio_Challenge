@@ -229,7 +229,7 @@ header .sec_parent .logo a {
     width: 80%;
 }
 
-.card img{
+.card img {
     object-fit: cover;
 }
 
@@ -259,6 +259,37 @@ header .sec_parent .logo a {
     padding: 6px 20px;
     border-radius: 20px;
     cursor: pointer;
+}
+
+/* Skills */
+.skills {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container_fluid {
+    display: flex;
+    width: 80%;
+
+}
+
+.container_fluid .frontend {
+    width: 45%;
+}
+
+.container_fluid .frontend img {
+    width: 70%;
+}
+
+.container_fluid .backend {
+    width: 45%;
+}
+
+.container_fluid .backend img {
+    width: 70%;
 }
 
 /** BreakPoints **/
@@ -321,7 +352,7 @@ header .sec_parent .logo a {
     }
 
     /* Project */
-    .card{
+    .card {
         margin-bottom: 30px;
     }
 }
@@ -406,8 +437,13 @@ header .sec_parent .logo a {
         width: 460px;
     }
 
-    .card{
+    .card {
         margin-bottom: 20px;
+    }
+
+    /*  */
+    .container_fluid {
+        flex-direction: column;
     }
 }
 
