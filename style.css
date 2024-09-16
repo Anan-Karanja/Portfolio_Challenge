@@ -9,7 +9,8 @@
     --grey: #383838;
     --Jonquil: #FFCF00;
     --Night: #141414;
-    --Platinum: #E3E4E5;
+    --Platinum: #e0e9ed;
+    --Dodger_blue: #0496FF;
     --profile_gradient: linear-gradient(-45deg, #FBF5EE, #F5E8D5);
 }
 
@@ -17,7 +18,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 2px solid orange;
+    scroll-behavior: smooth;
+    /* border: 2px solid orange; */
 }
 
 html {
@@ -27,6 +29,7 @@ html {
 /* Navbar */
 header {
     width: 100%;
+    height: 75px;
     position: fixed;
     background: var(--AntiqueWhite);
     top: 0;
@@ -36,7 +39,7 @@ header {
 
 .navigation .sec_parent {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     position: relative;
     width: 100%;
@@ -53,11 +56,12 @@ header .sec_parent .logo a {
 /* Nav links */
 .sec_parent #nav_bar a {
     font-family: "Manrope", Arial, Helvetica Neue, Helvetica, sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 500;
-    color: var(--Night);
+    color: var(--grey);
     text-decoration: none;
     margin-left: 1.3rem;
+    position: relative;
 }
 
 .sec_parent #nav_bar a.active {
@@ -65,6 +69,11 @@ header .sec_parent .logo a {
     font-size: 1.1rem;
     margin: 1.5rem 0;
     text-align: center;
+}
+
+/* Hover effect */
+.sec_parent #nav_bar a:hover {
+    color: var(--Night);
 }
 
 /* Hamburger menu styles */
@@ -84,112 +93,103 @@ header .sec_parent .logo a {
 
 
 /** Hero Section **/
-.hero {
+.hero_section {
     width: 100%;
-    height: 80vh;
-    margin: 20px auto;
-    padding: 0 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-top: 75px;
 }
 
-/* Child1 */
-.hero .title {
-    width: 500px;
-    height: 50%;
+section .hero_container {
+    width: 100%;
+    height: calc(100vh - 75px);
+    background-image: url(Hero1.png);
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 0 2%;
+    padding: 15% 8%;
+    margin-top: 20px;
 }
 
-/* Hero Title */
-.hero .title h1 {
+
+.title {
+    display: flex;
+    flex-direction: column;
+}
+
+.title h1 {
     font-family: "Montserrat", Arial, Helvetica Neue, Helvetica, sans-serif;
     font-size: 4rem;
     font-weight: 700;
     color: var(--Night);
 }
 
-/* Hero Paragraph */
-.hero .title p {
+.title p {
     font-family: "Manjari", Arial, Helvetica Neue, Helvetica, sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 400;
     color: var(--grey);
     letter-spacing: 0.1rem;
 }
 
-/* CV Download  */
-.hero .title .downloadL {
+/* Download link */
+.download_Link {
     display: flex;
-    width: 60%;
-    height: 28%;
-    justify-content: space-between;
     align-items: center;
 }
 
-/* Download Icon */
-.hero .fa-cloud-arrow-down {
-    color: var(--Night);
-}
-
-/* Download Link */
-.hero .title .downloadL .file_pdf a {
+.download_Link .file_pdf a {
     font-family: "McLaren", Arial, Helvetica Neue, Helvetica, sans-serif;
     font-size: 1rem;
     text-decoration: none;
     color: var(--Night);
     background-color: var(--Jonquil);
-    padding: 15px 20px;
+    border: 1px solid var(--Jonquil);
+    padding: 10px 20px;
+    margin: 20px 10px;
     border-radius: 20px;
     cursor: pointer;
+    transition: all 0.2s;
 }
 
-/* Social icons */
-.hero .title .downloadL .socials {
-    display: flex;
-    justify-content: space-between;
-    width: 30%;
+.download_Link .file_pdf a:hover {
+    border: 1px solid var(--grey);
 }
 
-.hero .title .downloadL .socials i {
-    font-size: 1.8rem;
-    color: var(--grey);
-}
-
-.hero .title .downloadL .socials i:hover {
+.download_Link .file_pdf .fa-cloud-arrow-down {
+    margin-left: 5px;
     color: var(--Night);
 }
 
-/* Child2 */
-.hero .hero_img {
-    width: 550px;
+.download_Link .socials {
+    display: flex;
+    width: 30%;
 }
 
-.hero .hero_img img {
-    width: 100%;
+.download_Link .socials i {
+    margin-left: 8px;
+    font-size: 1.8rem;
+    color: var(--grey);
+    transition: all 0.3s;
 }
 
+.download_Link .socials i:hover {
+    color: var(--Night);
+}
 
 /* About Section */
-
-#About {
-    width: 80%;
-    /* margin: 0 auto; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.about_section {
+    text-align: center;
+    min-height: 70vh;
+    margin-top: 20px;
 }
 
-.info .profileImg {
-    display: flex;
-    justify-content: center;
-    align-content: center;
+.about_section .about_title {
+    text-align: center;
 }
 
-.textPrimary {
+.about_section h1 {
     font-family: "Manrope", Arial, Helvetica Neue, Helvetica, sans-serif;
     font-size: 2.5rem;
     font-weight: 800;
@@ -198,158 +198,135 @@ header .sec_parent .logo a {
     margin-bottom: 8px;
 }
 
-
-
-.info p {
-    font-size: 1.2rem;
-    font-weight: 400;
-    font-family: "Manjari", Arial, Helvetica Neue, Helvetica, sans-serif;
-    color: var(--grey);
-}
-
-
-/* Project Section */
-.projects {
-    height: 100vh;
+.about_section .about_container {
+    width: 80%;
     display: flex;
+    margin: 0 auto;
     justify-content: center;
     align-items: center;
 }
 
-.projects .container {
-    width: 80%;
+.about_section .about_container .profile_image {
+    width: 50%;
+    min-width: 250px;
 }
 
-.card img {
+.about_section .about_container .profile_image img {
+    width: 80%;
     object-fit: cover;
 }
 
-.cardTitle {
+.about_container .profile_info {
+    background-color: var(--Platinum);
+    border-radius: 20px;
+    padding: 1% 2%;
+}
+
+.about_container .profile_info p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: "Manjari", Arial, Helvetica Neue, Helvetica, sans-serif;
+    color: var(--grey);
+    padding: 10px 25px;
+}
+
+/* Project Section */
+#Projects .card_container {
+    min-height: 100vh;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+#Projects .project_title h1 {
+    font-family: "Manrope", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    color: var(--grey);
+    margin-top: 28px;
+    margin-bottom: 8px;
+}
+
+/* Projects Card */
+.card {
+    max-width: 280px;
+    height: 380px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid #6f6f6f;
+}
+
+.card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.card .details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+}
+
+.card .details h4 {
     font-family: "Manrope", Arial, Helvetica Neue, Helvetica, sans-serif;
     font-size: 1.4rem;
     font-weight: 800;
     text-align: center;
     color: var(--grey);
-    margin-bottom: 8px;
-}
-
-/* card button */
-.buttons {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
     margin-bottom: 10px;
 }
 
-.buttons a {
+.card .details .card_btns {
+    display: flex;
+}
+
+.card .details .card_btns a {
     font-family: "McLaren", Arial, Helvetica Neue, Helvetica, sans-serif;
     font-size: 1rem;
     text-decoration: none;
     color: var(--Night);
     background-color: var(--Jonquil);
-    padding: 6px 20px;
     border-radius: 20px;
+    padding: 6px 20px;
+    margin-right: 10px;
     cursor: pointer;
+    transition: all 0.2s;
 }
 
-/* Skills */
-.skills {
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.card .details .card_btns a:hover {
+    color: var(--Jonquil);
+    background-color: var(--grey);
 }
 
-.container_fluid {
-    display: flex;
-    width: 80%;
-}
 
-.container_fluid article {
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-}
-
-.container_fluid i {
-    font-size: 4rem;
-}
-
-.container_fluid article h3 {
-    font-family: "Manrope", Arial, Helvetica Neue, Helvetica, sans-serif;
-    font-size: 2rem;
-    font-weight: 800;
-    text-align: center;
-    color: var(--grey);
-    margin-bottom: 8px;
-}
 
 /** BreakPoints **/
-@media (max-width: 1445px) {
-    .hero .title {
-        width: 500px;
-        gap: 1.5rem;
-    }
+@media (max-width: 1445px) {}
 
-    /* Hero Title */
-    .hero .title h1 {
-        font-size: 3.8rem;
-    }
-}
+@media (max-width: 1079px) {
 
-@media (max-width: 1025px) {
-
-    /* CV Download  */
-    .hero .title .downloadL {
-        width: 65%;
-    }
-
-    /* Child2 */
-    .hero .hero_img {
-        width: 420px;
+    /* Hero */
+    section .hero_container {
+        background: linear-gradient(rgba(255, 253, 248, 0.1), rgba(251, 245, 238, 0.9), rgba(251, 245, 238, 1)), url(Hero1.png);
+        background-position: right;
+        background-size: contain;
+        background-repeat: no-repeat;
+        justify-content: center;
     }
 }
 
-@media (max-width: 992px) {
-    header {
-        padding: 1rem 5%;
-    }
-
-    /* Hero Section */
-    /* Child1 */
-    .hero .title {
-        width: 450px;
-        gap: 1.5rem;
-        /* border: 2px solid violet; */
-    }
-
-    /* Hero Title */
-    .hero .title h1 {
-        font-size: 3.6rem;
-    }
-
-    /* Hero Paragraph */
-    .hero .title p {
-        font-size: 1.6rem;
-    }
-
-    /* CV Download  */
-    .hero .title .downloadL {
-        width: 70%;
-    }
-
-    /* Child2 */
-    .hero .hero_img {
-        width: 400px;
-    }
-
-    /* Project */
-    .card {
-        margin-bottom: 30px;
-    }
-}
+@media (max-width: 992px) {}
 
 @media (max-width: 769px) {
 
@@ -361,6 +338,7 @@ header .sec_parent .logo a {
         width: 100%;
         height: 14.5rem;
         background: var(--AntiqueWhite);
+        border-bottom: 2px solid rgba(255, 255, 255, 0.69);
         display: none;
         flex-direction: column;
         align-items: center;
@@ -369,6 +347,11 @@ header .sec_parent .logo a {
 
     .sec_parent #nav_bar a {
         margin: 1rem 0;
+    }
+
+    .sec_parent #nav_bar a:hover {
+        background-color: var(--grey);
+        color: var(--Jonquil);
     }
 
     .sec_parent .hamburger {
@@ -391,112 +374,23 @@ header .sec_parent .logo a {
         display: flex;
     }
 
-
-    /** Hero Section **/
-    .hero {
-        margin-top: 1rem;
-        flex-direction: column-reverse;
-    }
-
-    /* Child1 */
-    .hero .title {
-        text-align: center;
-        display: flex;
+    /* About Section */
+    .about_section .about_container {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
 
-    /* Hero Title */
-    .hero .title h1 {
-        font-size: 3.3rem;
-    }
-
-    /* Hero Paragraph */
-    .hero .title p {
-        font-size: 1.5rem;
-    }
-
-    /* CV Download  */
-    .hero .title .downloadL {
-        display: flex;
-        width: 70%;
-        justify-content: space-around;
-        align-items: center;
-        /* border: 2px solid blue; */
-    }
-
-    /* Child2 */
-    .hero .hero_img {
-        width: 460px;
-    }
-
-    .card {
-        margin-bottom: 20px;
-    }
-
-    /*  */
-    .container_fluid {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
 }
 
 @media (max-width: 425px) {
 
-    /* Child1 */
-    .hero .title {
-        width: 350px;
-        gap: 1.5rem;
-        /* border: 2px solid violet; */
-    }
-
-    /* Hero Title */
-    .hero .title h1 {
-        font-size: 3rem;
-    }
-
-    /* Hero Paragraph */
-    .hero .title p {
-        font-size: 1.6rem;
-    }
-
-    /* Child2 */
-    .hero .hero_img {
-        width: 300px;
+    /* Hero */
+    section .hero_container {
+        background: linear-gradient(rgba(255, 253, 248, 0.7), rgba(251, 245, 238, 0.9), rgba(251, 245, 238, 1)), url(Hero1.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        justify-content: center;
     }
 }
 
-@media (max-width: 376px) {
-
-    /* Child1 */
-    .hero .title {
-        width: 350px;
-        gap: 1.5rem;
-    }
-
-    /* Hero Title */
-    .hero .title h1 {
-        font-size: 2.3rem;
-    }
-
-    /* Hero Paragraph */
-    .hero .title p {
-        font-size: 1rem;
-    }
-
-    /* CV Download  */
-    .hero .title .downloadL {
-        width: 80%;
-        /* border: 2px solid blue; */
-    }
-
-    /* Download Link */
-    .hero .title .downloadL .file_pdf a {
-        font-size: 1rem;
-        padding: 15px 8px;
-        border-radius: 15px;
-    }
-
-}
+@media (max-width: 376px) {}

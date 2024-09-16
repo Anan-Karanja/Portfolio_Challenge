@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
     <script src="https://kit.fontawesome.com/84dc69d9ca.js" crossorigin="anonymous" defer></script>
     <script src="./app.js" defer></script>
     <title>Anan Portfolio</title>
@@ -34,121 +31,94 @@
             </nav>
         </div>
     </header>
+
     <!-- Hero Section -->
-    <section>
-        <div class="hero">
+    <section class="hero_section" id="Home">
+        <div class="hero_container">
             <!-- Child1 -->
             <div class="title">
-                <div class="name">
-                    <h1>Anan Karanja</h1>
-                    <p>Hi, I am a Software Developer</p>
-                </div>
-                <div class="downloadL">
-                    <div class="file_pdf">
-                        <a download="Anan Software Developer Resume">Download CV <i
-                                class="fa-solid fa-cloud-arrow-down"></i></a>
-                    </div>
-                    <div class="socials">
-                        <a href="https://github.com/Anan-Karanja" target="_blank"><i
-                                class="fa-brands fa-github"></i></a>
-                        <a href="mailto:anankaranja.n@gmail.com?body=Hello Anan," target="_blank"> <i
-                                class="fa-solid fa-envelope"></i></a>
-                    </div>
-                </div>
+                <h1>Anan Karanja</h1>
+                <p>Hi, I am a Software Developer</p>
             </div>
             <!-- Child2 -->
-            <div class="hero_img">
-                <img src="./Hero1.png" alt="Hero Section">
+            <div class="download_Link">
+                <div class="file_pdf">
+                    <a download="Anan Software Developer Resume">My Resume<i
+                            class="fa-solid fa-cloud-arrow-down"></i></a>
+                </div>
+                <div class="socials">
+                    <a href="https://github.com/Anan-Karanja" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:anankaranja.n@gmail.com?body=Hello Anan," target="_blank"> <i
+                            class="fa-solid fa-envelope"></i></a>
+                </div>
             </div>
         </div>
+
     </section>
 
     <!-- About Section -->
-    <section class="container py-5 mt-5" id="About">
-        <div class="row">
-            <div class="profileImg col-12 col-lg-4">
-                <img src="./Profile tag_2.png" alt="Profile" width="250" class="img-fluid ms-auto d-block">
+    <section class="about_section" id="About">
+        <h1 class="about_title">About</h1>
+        <div class="about_container">
+            <div class="profile_image">
+                <img src="./images/Profile tag_2.png" alt="Profile">
             </div>
-            <div class="info col-12 col-lg-8">
-                <h2 class="textPrimary">About</h2>
+            <div class="profile_info">
                 <p>I'm an aspiring software developer with a strong interest in web and mobile app development. While my
                     formal education extends to high school, I am actively pursuing my tech aspirations through
                     platforms like FreeCodeCamp, Udemy, PLP, CS50, and YouTube tutorials.</p>
 
                 <p>Currently, I am focusing on solidifying my web technologies such as JavaScript skills to create
                     dynamic and captivating web experiences. I am also eager to explore technologies like React, PHP,
-                    Python, Node.js, Kotlin, and Swift to broaden my horizons and contribute to innovative projects
-                    across various platforms.</p>
+                    Python, Node.js, Kotlin, and Swift</p>
             </div>
         </div>
     </section>
 
     <!-- Project Section -->
     <section id="Projects">
-        <div class="container">
-            <h2 class="textPrimary">Projects</h2>
+        <div class="project_title">
+            <h1>Projects</h1>
         </div>
-        <!-- Card1 -->
-        <div class="container py-3">
-            <div class="row gp-5">
-                <!-- Project 1 -->
-                <div class="col-12 col-lg-4">
-                    <div class="card shadow">
-                        <!-- Project Image -->
-                        <img src="./images/A JavaScript Clock.png" alt="" class="card-img-top" height="250">
-                        <!-- Info -->
-                        <div class="card-body">
-                            <h3 class="cardTitle">A JavaScript Clock</h3>
-                            <!-- Card Links -->
-                            <div class="buttons">
-                                <a href="https://github.com/Anan-Karanja/CSS-JS-Clock" class="btn"
-                                    target="_blank">Github</a>
-                                <a href="https://anan-karanja.github.io/CSS-JS-Clock/" class="btn"
-                                    target="_blank">Demo</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="col-12 col-lg-4">
-                    <div class="card shadow">
-                        <!-- Project Image -->
-                        <img src="./images/Email Validator.png" alt="" class="card-img-top" height="250">
-                        <!-- Info -->
-                        <div class="card-body">
-                            <h3 class="cardTitle">Email Validator</h3>
-                            <!-- Card Links -->
-                            <div class="buttons">
-                                <a href="https://github.com/Anan-Karanja/Email-Validation" class="btn"
-                                    target="_blank">Github</a>
-                                <a href="https://anan-karanja.github.io/Email-Validation/" class="btn"
-                                    target="_blank">Demo</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 3 -->
-                <div class="col-12 col-lg-4">
-
-                    <div class="card shadow">
-                        <!-- Project Image -->
-                        <img src="./images/Car Gallery.png" alt="" width="150" class="card-img-top" height="250">
-                        <!-- Info -->
-                        <div class="card-body">
-                            <h3 class="cardTitle">Car & Bike Gallery</h3>
-                            <!-- Card Links -->
-                            <div class="buttons">
-                                <a href="https://github.com/Anan-Karanja/Image-Gallery" class="btn"
-                                    target="_blank">Github</a>
-                                <a href="https://anan-karanja.github.io/Image-Gallery/" class="btn"
-                                    target="_blank">Demo</a>
-                            </div>
-                        </div>
+        <!-- Cards -->
+        <div class="card_container">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="./images/A JavaScript Clock.png" alt="A JavaScript Clock">
+                <div class="details">
+                    <h4> A JavaScript Clock </h4>
+                    <div class="card_btns">
+                        <a href="https://github.com/Anan-Karanja/CSS-JS-Clock" class="btn" target="_blank">Github</a>
+                        <a href="https://anan-karanja.github.io/CSS-JS-Clock/" class="btn" target="_blank">Demo</a>
                     </div>
                 </div>
             </div>
-        </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="./images/Email Validator.png" alt="Email Validator">
+                <div class="details">
+                    <h4> Email Validator </h4>
+                    <div class="card_btns">
+                        <a href="https://github.com/Anan-Karanja/Email-Validation" class="btn"
+                            target="_blank">Github</a>
+                        <a href="https://anan-karanja.github.io/Email-Validation/" class="btn" target="_blank">Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="./images/Car Gallery.png" alt="Car & Bike Gallery">
+                <div class="details">
+                    <h4> Car & Bike Gallery </h4>
+                    <div class="card_btns">
+                        <a href="https://github.com/Anan-Karanja/Image-Gallery" class="btn" target="_blank">Github</a>
+                        <a href="https://anan-karanja.github.io/Image-Gallery/" class="btn" target="_blank">Demo</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </section>
