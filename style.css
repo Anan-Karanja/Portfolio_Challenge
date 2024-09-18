@@ -9,10 +9,13 @@
     --grey: #383838;
     --Jonquil: #FFCF00;
     --Night: #141414;
-    --Platinum: #e0e9ed;
+    --Platinum: #E3E4E5;
+    --Sea_salt: #F6F7F8;
     --Dodger_blue: #0496FF;
     --profile_gradient: linear-gradient(-45deg, #FBF5EE, #F5E8D5);
 }
+
+
 
 * {
     margin: 0;
@@ -50,7 +53,7 @@ header {
 /** Logo */
 header .sec_parent .logo a {
     font-size: 1.2rem;
-    color: var(--Night);
+    color: var(--grey);
 }
 
 /* Nav links */
@@ -86,7 +89,7 @@ header .sec_parent .logo a {
 .sec_parent .hamburger span {
     height: 2px;
     width: 25px;
-    background: var(--Night);
+    background: var(--AntiqueWhite);
     margin: 4px;
     transition: all 0.3s;
 }
@@ -121,7 +124,7 @@ section .hero_container {
 .title h1 {
     font-family: "Montserrat", Arial, Helvetica Neue, Helvetica, sans-serif;
     font-size: 4rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--Night);
 }
 
@@ -190,12 +193,12 @@ section .hero_container {
 }
 
 .about_section h1 {
-    font-family: "Manrope", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-family: "Montserrat", Arial, Helvetica Neue, Helvetica, sans-serif;
     font-size: 2.5rem;
-    font-weight: 800;
+    font-weight: 600;
     text-align: center;
     color: var(--grey);
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .about_section .about_container {
@@ -203,6 +206,7 @@ section .hero_container {
     display: flex;
     margin: 0 auto;
     justify-content: center;
+    gap: 20px;
     align-items: center;
 }
 
@@ -217,9 +221,9 @@ section .hero_container {
 }
 
 .about_container .profile_info {
-    background-color: var(--Platinum);
+    background-color: var(--Sea_salt);
     border-radius: 20px;
-    padding: 1% 2%;
+    padding: 1% 5%;
 }
 
 .about_container .profile_info p {
@@ -227,7 +231,7 @@ section .hero_container {
     font-weight: 400;
     font-family: "Manjari", Arial, Helvetica Neue, Helvetica, sans-serif;
     color: var(--grey);
-    padding: 10px 25px;
+    padding: 10px;
 }
 
 /* Project Section */
@@ -237,19 +241,18 @@ section .hero_container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* align-items: center; */
     gap: 2rem;
     margin: 0 auto;
 }
 
 #Projects .project_title h1 {
-    font-family: "Manrope", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-family: "Montserrat", Arial, Helvetica Neue, Helvetica, sans-serif;
     font-size: 2.5rem;
-    font-weight: 800;
+    font-weight: 600;
     text-align: center;
     color: var(--grey);
     margin-top: 28px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 /* Projects Card */
@@ -309,7 +312,158 @@ section .hero_container {
     background-color: var(--grey);
 }
 
+/* Skills Section */
+.skills {
+    min-height: 100vh;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 20px auto;
+}
 
+.skills .skills_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+
+.skills .skill_title h1 {
+    font-family: "Montserrat", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--grey);
+    margin-bottom: 10px;
+}
+
+.skills .skills_container h3 {
+    font-family: "Manrope", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-align: center;
+    color: var(--Night);
+}
+
+.technologies {
+    width: 400px;
+    border: 1px solid var(--grey);
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.technologies article {
+    display: flex;
+    align-items: center;
+}
+
+.technologies article div {
+    margin-left: 5px;
+}
+
+.technologies article i {
+    font-size: 1.3rem;
+    color: var(--grey);
+    margin-right: 8px;
+}
+
+.technologies article h4 {
+    font-family: "Manrope", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--grey);
+}
+
+.technologies article p {
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-family: "Manjari", Arial, Helvetica Neue, Helvetica, sans-serif;
+    color: var(--grey);
+}
+
+/* Contact Section */
+#contact {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px 100px;
+}
+
+#contact:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./images/bg.jpg) no-repeat center;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(50px);
+}
+
+.contact_container {
+    max-width: 850px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.contact_container .left {
+    height: 100%;
+    background: url(./images/bg.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.contact_container .right {
+    padding: 25px 40px;
+    width: 100%;
+    height: 100%;
+    background: var(--Sea_salt);
+}
+
+.right h2 {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-family: "Montserrat", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--grey);
+    margin-bottom: 10px;
+}
+
+.right h2:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50%;
+    border-radius: 2px;
+    background-color: var(--Jonquil);
+}
+
+input,
+textarea {
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: 0.3s;
+    display: block;
+    font-weight: 400;
+    font-family: "Manjari", Arial, Helvetica Neue, Helvetica, sans-serif;
+}
 
 /** BreakPoints **/
 @media (max-width: 1445px) {}
@@ -350,8 +504,8 @@ section .hero_container {
     }
 
     .sec_parent #nav_bar a:hover {
-        background-color: var(--grey);
-        color: var(--Jonquil);
+        color: var(--grey);
+        text-decoration: underline;
     }
 
     .sec_parent .hamburger {
@@ -377,6 +531,15 @@ section .hero_container {
     /* About Section */
     .about_section .about_container {
         flex-direction: column;
+    }
+
+    /* Contact Section */
+    .contact_container {
+        grid-template-columns: 1fr;
+    }
+
+    .left {
+        max-height: 500px;
     }
 
 }
